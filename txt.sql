@@ -28,6 +28,7 @@ insert into compras (id_cliente, id_produto) values (8,10);
 --Olga Cascais Fortunato comprou dois Celular Topo de Linha. Adicione os registros de compra na tabela compra;
 insert into compras (id_cliente, id_produto) values (4,8);
 insert into compras (id_cliente, id_produto) values (4,8);
+insert into compras (id_cliente, id_produto) values (4,8), (4,8);
 
 --Martinha Lima Zambujal devolveu o produto Fone Topo de Linha. Remova este registro da tabela compra;
 delete from compras where id_cliente = 5 and id_produto = 14;
@@ -39,7 +40,7 @@ select * from produtos order by preco asc;
 select * from produtos order by preco asc limit 3;
 
 --Busque o produto com o maior preço;
-select * from produtos order by preco desc;
+select * from produtos order by preco desc limit 1;
 
 --Busque o produto com o segundo menor preço. Para este item, procure por sql offset.
 select * from produtos order by preco asc limit 1 offset 1;
